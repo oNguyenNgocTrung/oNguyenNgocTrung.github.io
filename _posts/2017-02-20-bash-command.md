@@ -27,7 +27,7 @@ tags: [linux, unix]
 * **Esc+T:** Đổi chỗ cho 2 từ cuối cùng trước con trỏ.
 
 # Tìm kiếm các lệnh đã chạy trong history {#search_history}
-**1. Show các lệnh trong quá khứ với `history`.** {#show_history}
+**1. Show các lệnh trong quá khứ với `history`. {#show_history} **
 
  Ví dụ:
 
