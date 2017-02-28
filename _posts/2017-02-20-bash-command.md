@@ -12,7 +12,8 @@ tags: [linux, unix]
   - [Sử dụng chức năng tìm kiếm của shell](#shell)
   - [Tìm kiếm history với tiện ích peco](#peco)
   
-# Một số phím tắt cơ bản khi sử dụng {#keyboard_shortcuts}
+# {#keyboard_shortcuts} Một số phím tắt cơ bản khi sử dụng
+
 
 * **Up/Down Arrows:** Dùng mũi tên lên xuống để di chuyển qua lại các câu lệnh đã thực hiện trước đây.
 * **Home và End:** Di chuyển con trỏ lên đầu or cuối dòng trong câu lệnh hiện tại.
@@ -27,6 +28,8 @@ tags: [linux, unix]
 * **Esc+T:** Đổi chỗ cho 2 từ cuối cùng trước con trỏ.
 
 # Tìm kiếm các lệnh đã chạy trong history {#search_history}
+
+
 ## Show các lệnh trong quá khứ với `history`. {#show_history}
 
  Ví dụ:
