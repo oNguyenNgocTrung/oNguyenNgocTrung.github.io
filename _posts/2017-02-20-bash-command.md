@@ -25,8 +25,8 @@ tags: [linux, unix]
 * **Ctrl+H:** Xóa chữ trước con trỏ tương tự phím xóa(`backspace`)
 * **Ctrl+T:** Đổi chỗ 2 chũ cuối cùng trước con trỏ.
 * **Esc+T:** Đổi chỗ cho 2 từ cuối cùng trước con trỏ.
-{#search_history}
-# Tìm kiếm các lệnh đã chạy trong history 
+
+# Tìm kiếm các lệnh đã chạy trong history {#search_history}
 
 ### Show các lệnh trong quá khứ với `history`. {#show_history}
 
