@@ -12,8 +12,7 @@ tags: [linux, unix]
   - [Sử dụng chức năng tìm kiếm của shell](#shell)
   - [Tìm kiếm history với tiện ích peco](#peco)
   
-# {#keyboard_shortcuts} Một số phím tắt cơ bản khi sử dụng
-
+# Một số phím tắt cơ bản khi sử dụng {#keyboard_shortcuts}
 
 * **Up/Down Arrows:** Dùng mũi tên lên xuống để di chuyển qua lại các câu lệnh đã thực hiện trước đây.
 * **Home và End:** Di chuyển con trỏ lên đầu or cuối dòng trong câu lệnh hiện tại.
@@ -26,11 +25,10 @@ tags: [linux, unix]
 * **Ctrl+H:** Xóa chữ trước con trỏ tương tự phím xóa(`backspace`)
 * **Ctrl+T:** Đổi chỗ 2 chũ cuối cùng trước con trỏ.
 * **Esc+T:** Đổi chỗ cho 2 từ cuối cùng trước con trỏ.
+{#search_history}
+# Tìm kiếm các lệnh đã chạy trong history 
 
-# Tìm kiếm các lệnh đã chạy trong history {#search_history}
-
-
-## Show các lệnh trong quá khứ với `history`. {#show_history}
+### Show các lệnh trong quá khứ với `history`. {#show_history}
 
  Ví dụ:
 
@@ -63,7 +61,7 @@ Ngoài ra có thể gõ lại lệnh trước đó bằng shortcut `!-1` thay v�
 ```
 $ history -c
 ```
-## TÌm kiếm history với `grep` {#grep}
+### TÌm kiếm history với `grep` {#grep}
 
 ```
 $ history | grep 'từ cần tìm'
@@ -72,7 +70,7 @@ $ history | grep 'từ cần tìm'
 Lệnh trên sẽ trỏ toàn bộ output của history vào `grep` và `grep` sẽ trích ra các từ cần tìm.
 (Tìm hiểu thêm về lệnh `grep` tại [đây](http://www.ntrung.net))
 
-## Sử dụng chức năng tìm kiếm của shell {#shell}
+### Sử dụng chức năng tìm kiếm của shell {#shell}
 
 * **Ctrl+r:** Dùng shortcut trên để trả về prompt:
 
@@ -81,7 +79,7 @@ Lệnh trên sẽ trỏ toàn bộ output của history vào `grep` và `grep` s
 ```
 * **Ctrl+g:** Thoát chức năng tìm kiếm.
 
-## Tìm kiếm history với tiện ích `peco` {#peco}
+### Tìm kiếm history với tiện ích `peco` {#peco}
 
 Peco là một tiện ích giúp pipe output vào một màn hình mà ở đó bạn có thể filter được các chuỗi kí tự tuỳ ý.
 
