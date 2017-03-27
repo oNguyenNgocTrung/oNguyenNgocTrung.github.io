@@ -230,7 +230,7 @@ Gần đây mình có làm một dự án có liên quan đến lưu trữ dự 
   4 rows in set (0.00 sec)
   ```
 
-  ** Tìm độ sâu của các node **
+  **Tìm độ sâu của các node**
 
   ```
   mysql> SELECT node.name, (COUNT(parent.name) - 1) AS depth FROM nested_families AS node, nested_families AS parent WHERE node.lft BETWEEN parent.lft AND parent.rgt GROUP BY node.id;
