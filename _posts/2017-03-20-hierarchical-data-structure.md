@@ -113,4 +113,16 @@ Gần đây mình có làm một dự án có liên quan đến lưu trữ dự 
   1 row in set (0,00 sec)
   ```
 
+  Tổng kết lại ta có thể thấy `Parent-child model` có những ưu và nhược điểm sau:
+
+  **Ưu điểm:**
+  - Cấu trúc dữ liệu đơn giản
+  - Tìm node cha, node con cách 1 cấp dễ dàng
+  - Thêm, xóa, di chuyển node đơn giản
+
+  **Nhược điểm:**
+  - Việc duyệt cây, duyệt nhánh, hay tìm các node con node cha trên một cấp khá phức tạp.
+
 ## Nested set model
+
+
