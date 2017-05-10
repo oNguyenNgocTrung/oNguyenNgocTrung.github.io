@@ -11,7 +11,7 @@ tags: [linux, unix]
   - [TÌm kiếm history voi grep](#grep)
   - [Sử dụng chức năng tìm kiếm của shell](#shell)
   - [Tìm kiếm history với tiện ích peco](#peco)
-  
+
 # Một số phím tắt cơ bản khi sử dụng {#keyboard_shortcuts}
 
 * **Up/Down Arrows:** Dùng mũi tên lên xuống để di chuyển qua lại các câu lệnh đã thực hiện trước đây.
@@ -107,7 +107,9 @@ export PATH=$PATH:$HOME/.go/bin
 Cài đặt peco
 
 ```
-go get github.com/peco/peco/cmd/peco
+wget https://github.com/peco/peco/releases/download/v0.2.9/peco_linux_amd64.tar.gz
+tar -C -xzf peco_linux_amd64.tar.gz
+sudo mv /peco_linux_amd64/peco /usr/local/bin/
 ```
 
 Trên Mac chỉ cẩn cài đăt:
