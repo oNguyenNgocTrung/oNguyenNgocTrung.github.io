@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sự khác nhau giữa put và patch
-tags: [reactjs]
+tags: [til]
 ---
 
 Gần đây mình có viết một đoạn ajax dùng method `PUT` để gủi request lên controller update một trường nào đó thì bị comment yêu cầu dùng method `PATCH`
