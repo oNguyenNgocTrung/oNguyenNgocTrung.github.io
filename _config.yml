@@ -26,7 +26,8 @@ navbar-links:
   Tut Memo:
     - Linux Unix: linux_unix
     - Ruby: ruby
-  Books: book
+  Books:
+    - React By Example: react_by_example
   "#TIL": til
   About Me / Contact: "aboutme"
 
