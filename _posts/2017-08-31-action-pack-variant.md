@@ -103,6 +103,11 @@ Vậy là đã xong phần thiết lập. Bạn có thể test trên từng thi�
   ![Tablet](../img/test_variant_tablet.png)
 
 
+Ngoài việc sử dụng variant cho responsive chúng ta có thể sử dụng nhiều cho mục đích khác tùy vào việc chúng ta gán giá trị cho variant vào việc gì, ví dụ như có thể dùng cho việc xem các phiên bản khác nhau, hay tùy vào `current_user` là `admin` hay `normal` thì phần view hiển thị có thể khác nhau...có rất nhiều bài toán có thể áp dụng.
+
+Source code phần demo ở [đây](https://github.com/oNguyenNgocTrung/test_page_performance/commit/5cef12a10dbada15f8b119ba0f0da71c0ac5e9af)
+
+
 
 
 
