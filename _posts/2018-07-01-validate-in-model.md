@@ -65,3 +65,5 @@ class User < ApplicationRecord
   validates :terms_of_service_accepted, acceptance: true, on: :registration
 end
 ```
+
+Tuy nhiên, điều này vẫn không lý tưởng - một model được sử dụng trong nhiều context khác nhau có một số logic chỉ áp dụng cho một trường hợp sử dụng và thậm chí còn tệ hơn, đó là mối quan tâm về UI.
