@@ -67,3 +67,30 @@ end
 ```
 
 Tuy nhiên, điều này vẫn không lý tưởng - một model được sử dụng trong nhiều context khác nhau có một số logic chỉ áp dụng cho một trường hợp sử dụng và thậm chí còn tệ hơn, đó là mối quan tâm về UI.
+
+## Solution 4 - Dùng form object
+
+Sử dụng form object có lẽ là giải pháp tốt nhât cho vấn đề trên. Có nhiều cách để implement một form object:
+
+- Tạo một ActiveModel model khác và tận dụng lợi thế của [ActiveModel Attributes](https://github.com/Azdaroth/active_model_attributes).
+- Dùng gem [dry-validation](http://dry-rb.org/gems/dry-validation/basics/working-with-schemas/)
+- Dùng gem [reform](https://github.com/trailblazer/reform) từ [Trailblazer](http://trailblazer.to/) slack.
+
+Trong bài viết này ta sẽ dùng gem [reform](https://github.com/trailblazer/reform) cho ví dụ trên
+
+```ruby
+# app/forms/user/registration_form.rb
+require "reform/form/coercion"
+
+class User::RegistrationForm < Reform::Form
+  # other property declarations and validations
+
+  property :terms_of_service_accepted, virtual: :true, type: Types::Form::Boolean
+
+  validates :terms_of_service_accepted, acceptance: true
+end
+```
+
+Đoạn code trên ngoài việc xử lí các properties(`email`, `password`, `password_confirmation`) ta còn tạo một attribute `terms_of_service_accepted` ảo(virtual) có type là `boolean` và thêm validate cho attribute trên.
+
+Mặc dù dùng form object là cách tiếp cận rõ ràng nhất tuy nhiên nó yêu cầu một số chi phi bổ sung, hầu hết cho việc setup, đôi khi có thể gây thêm khó khăn khi thêm setup or áp dụng logic từ bên thứ 3, ví dụ như [devise_invitable](https://github.com/scambra/devise_invitable).
