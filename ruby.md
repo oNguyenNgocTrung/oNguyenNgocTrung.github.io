@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Linux Unix Tips
+title: Ramdom Ruby and Rails Tips
 ---
 
 <div class="posts-list">
-  {% for post in site.tags.linux %}
+  {% for post in site.tags.ruby %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	    <h2 class="post-title">{{ post.title }}</h2>
