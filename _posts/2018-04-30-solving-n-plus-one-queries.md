@@ -1,7 +1,7 @@
 ---
 layout: post
 title: N+1 Queries or Memory Problem. Why not Solve Both?
-tags: [ruby, rails]
+tags: [ruby, rails, popular]
 ---
 
 Gần đây mình có gặp phải vấn đề là con server của mình bị tràn bộ nhớ, sau một hồi tìm hiều nguyên nhân thì phát hiện ra lỗi do có quá nhiều object đươc tạo ra khi dùng `includes`. Mình có tìm được một vài viết trên mạng ở [đây](https://blog.heroku.com/solving-n-plus-one-queries) có nói về cách giải quyết được vấn đề trên mà lâu này mình vẫn hay dùng `includes` một cách bừa bãi mà không để ý xem khi nào nên dùng và dùng như thế nào thì hợp lí cho từng bài toán.

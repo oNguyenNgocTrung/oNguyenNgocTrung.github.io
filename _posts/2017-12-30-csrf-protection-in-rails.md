@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Deep Dive into CSRF Protection in Rails
-tags: [rails, csrf]
+tags: [rails, csrf, popular]
 ---
 `CSRF` là một tính năng quan trọng trong Rails. Trong bài viết này chúng ta sẽ tìm hiểu chi tiết về cách hoạt động của nó. Bài viết được dịch và tóm tắt lại từ [đây](https://medium.com/rubyinside/a-deep-dive-into-csrf-protection-in-rails-19fa0a42c0ef) theo cách hiểu của người viết.
 

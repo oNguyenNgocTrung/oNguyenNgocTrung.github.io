@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Processing large CSV files with Ruby
-tags: [ruby, rails]
+tags: [ruby, rails, popular]
 ---
 
 Việc xử lý file lớn là một hoạt động cần bộ nhớ lớn và có thể khiến máy chủ hết RAM và đổi sang ổ đĩa. Với Ruby, có khá nhiều cách để xử lý thông tin những file này, chúng ta cùng kiểm chứng xem tài nguyên hệ thống được tiêu tốn thế nào cho mỗi cách.
 
-## Chuẩn bị dữ liệu mẫu 
+## Chuẩn bị dữ liệu mẫu
 
 Trước khi bắt đầu, chúng ta cần chuẩn bị một file CSV `data.csv` với một triệu bản ghi (~75MB) để test.
 
@@ -38,7 +38,7 @@ Môi trường test hiện tại là:
 ```
 Ruby version : 2.4.0
 Operation : ubuntu 16.04
-Processor : Intel® Core™ i5-7200U CPU @ 2.50GHz × 4 
+Processor : Intel® Core™ i5-7200U CPU @ 2.50GHz × 4
 Memory : 7,6 GiB
 ```
 

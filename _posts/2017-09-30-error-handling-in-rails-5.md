@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tùy chỉnh và xử lí lỗi 404 và 500 trong rails 5
-tags: [rails]
+tags: [rails, popular]
 ---
 
 Có một yêu cầu cơ bản mà hầu hết khi phát triển website ít chú ý đến hoặc hầu như quên đi là "Trang thông báo lỗi `Page not found` hoặc lỗi máy chủ `internal server error` hiển thị cho người dùng."

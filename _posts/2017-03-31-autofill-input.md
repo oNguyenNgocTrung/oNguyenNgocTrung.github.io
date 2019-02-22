@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tắt chức năng tự động fill các ô input
-tags: [til, html]
+tags: [til, html, popular]
 ---
 
 Hôm nay mình có gặp một vấn đề khá khó chịu khi làm form đăng kí, login cho một project linh tinh là việc trên trình duyệt như Chrome, Firefox tự động fill giá trị vào các ô input như email hay password kiểu dư lày

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tạo tiến trình progress trên terminal với ruby
-tags: [ruby, rails]
+tags: [ruby, rails, popular]
 ---
 
 Trong Rails đôi khi chúng ta phải chạy các rake task trên rails console mất khá nhiều thời gian như việc import khoảng 100k dữ liệu chẳng hạn. Bình thường chúng ta chỉ hiện thông báo ví dụ như là "Importing..." hay "Import done." khá là nhàm chán khi chúng ta không biết được cụ thể tiến trình đã thực hiện được đến đâu rồi. Trong bài này mình sẽ tạo một thanh tiến trình progress để thông báo tượng tự như việc bạn download 1 file băng lệnh `wget` trên linux.

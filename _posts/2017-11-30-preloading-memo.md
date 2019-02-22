@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tản mạn vể Eager Loading trong rails
-tags: [rails, preloading, til]
+tags: [rails, preloading, popular]
 ---
 
 Như các bạn đã biết, Rails cung cấp 4 cách khác nhau để load các dữ liệu có liên kết (dữ liệu liên kết qua các bảng).

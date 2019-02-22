@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails 5.1's form_with vs. form_tag vs. form_for
-tags: [rails]
+tags: [rails, popular]
 ---
 
 ![default image](../img/report10_1.jpeg)

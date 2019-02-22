@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tối ưu tốc độ load trang bằng Progressive Image Loading
-tags: [til]
+tags: [ruby, popular]
 ---
 
 Việc tối ưu tốc độ tải trang luôn được ưu tiên hàng đầu trong việc phát triển web. Với những trang có chứa nhiều hình ảnh thì tốc độ load image ảnh hưởng khá nhiều đến trải nghiệm của người dùng.

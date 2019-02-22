@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails and Conditional Validations in Models
-tags: [ruby, rails]
+tags: [ruby, rails, popular]
 ---
 
 Thông thường khi làm chức năng đăng kí tham gia một dịch vụ nào đó thường bắt gặp một ô checkbox yêu cầu chấp nhận Điều khoản dịch vụ / Chính sách bảo mật(Terms of Service/Privacy Policies). Trong trường hợp này chúng ta thường có một attribute trong database để xác nhận người dùng đã đồng ý hay chưa.

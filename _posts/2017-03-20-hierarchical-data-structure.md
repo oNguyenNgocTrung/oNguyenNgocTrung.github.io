@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tìm hiểu về Hierarchical Data Structure (Phần 1)
-tags: [ruby, rails]
+tags: [ruby, rails, popular]
 ---
 
 Gần đây mình có làm một dự án có liên quan đến lưu trữ dự liệu dạng phân cấp cha con. Đây là bài toán mình từng được học và dùng trong các bài thi ở trường đại học khá nhiều nhưng là lần đầu tiên mình sử dụng khi làm một dự án thực tế =]] Vậy để ôn lại chút kỉ niệm thời sinh viên, bài viết này sẽ tìm hiểu về dữ liệu dạng phân cấp (hierarchical data structure) và áp dụng bài toán với ROR.

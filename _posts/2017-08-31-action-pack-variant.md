@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action Pack Variants trong Rails
-tags: [til]
+tags: [ruby, popular]
 ---
 
 Trong bản phát hành Rails 4.1 có xuất hiện thêm một chức năng khá hay là [Action Pack Variants](http://guides.rubyonrails.org/4_1_release_notes.html#action-pack-variants). Chức năng này khá hữu ích khi làm responsive. Thay vì bạn phải sử dụng `CSS`, `JavaScript` để giúp website hiện thị phù hợp trên từng thiết bị, đặc biệt với những trang phức tạp hơn thì khối lượng `CSS`, `JavaScript` sẽ càng nhiều hơn gây nên chậm hơn thì với `Action Pack Variants` ta có thêm một options để giải quyết vấn đề này.

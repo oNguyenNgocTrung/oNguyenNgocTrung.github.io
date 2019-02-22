@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby String Methods (Ultimate Guide)
-tags: [ruby]
+tags: [ruby, popular]
 ---
 
 `String` là một object có rất nhiều method mà chúng ta có thể sử dụng để làm việc với chúng. Trong bài này, ta sẽ tìm hiểu các method hữu ích nhất khi làm việc với `string` thông qua các ví dụ.
