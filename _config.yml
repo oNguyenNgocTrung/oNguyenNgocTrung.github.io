@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: My Blog
+title: Nguyen Trung
 
 # Your name to show in the footer
 author: Nguyen Trung
@@ -52,12 +52,15 @@ round-avatar: true
 social-network-links:
   email: "trungnn142@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  # facebook: nnt142
   github: onguyenngoctrung
   twitter: trungnn142
-#  medium: yourname
-#  reddit: yourname
   linkedin: nguyenngoctrung
+#  facebook: nnt142
+#  patreon: yourname
+#  youtube: "@yourname"
+#  whatsapp: 15551212
+#  medium: yourname
+#  reddit: yourname or r/yoursubreddit
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -70,12 +73,16 @@ social-network-links:
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
+#  bluesky: yourname
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
+#  itchio: yourname
+#  untappd: yourname
+#  strava: youruserid
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
@@ -91,10 +98,14 @@ share-links-active:
   facebook: true
   linkedin: true
   vk: false
+  reddit: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
 url-pretty: "blog.nguyentrung.space"
+
+# Add the website title to the title of every page
+title-on-all-pages: true
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -125,13 +136,13 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
