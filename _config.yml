@@ -20,11 +20,10 @@ author: Nguyen Trung
 ###############################################
 
 navbar-links:
-  Notes:
-    - Linux Unix: linux_unix
-    - Ruby: ruby
-  "#TIL": til
-  About Me / Contact: "aboutme"
+  Topics: "topics"
+  TIL: "til"
+  Journal: "journal"
+  About: "aboutme"
 
 ################
 # --- Logo --- #
@@ -86,7 +85,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Sổ tay của Trung — code, sách, và vài thứ linh tinh.
 
 ###########################
 # --- General options --- #
@@ -151,16 +150,16 @@ footer-hover-col: "#0085A1"
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
 
-#navbar-img: "/assets/img/bgimage.png"
-#footer-img: "/assets/img/bgimage.png"
-#page-img: "/assets/img/bgimage.png"
+#navbar-img: "/assets/img/your-image.png"
+#footer-img: "/assets/img/your-image.png"
+#page-img: "/assets/img/your-image.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -234,16 +233,16 @@ footer-hover-col: "#0085A1"
 # (2) Install the giscus app in your repository (details at https://giscus.app),
 # (3) Fill in *all* the parameters below
 # See more details about giscus and each of the following parameters at https://giscus.app
-#giscus:
-#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
-#  category: Announcements # Category name of your GitHub Discussion posts
-#  category-id: # ID of your category, retrieve this info from https://giscus.app
-#  mapping: pathname
-#  reactions-enabled: 1
-#  emit-metadata: 0
-#  theme: light
+giscus:
+  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+  repository: oNguyenNgocTrung/oNguyenNgocTrung.github.io
+  repository-id: R_kgDOKWTpAQ
+  category: Announcements # Only maintainers can open threads here, so reader comments arrive as replies
+  category-id: DIC_kwDOKWTpAc4DFpYw
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
 
 ################
 # --- Misc --- #
@@ -260,10 +259,10 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Asia/Ho_Chi_Minh"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:title/
 paginate: 5
 
 kramdown:
@@ -271,12 +270,28 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
+  # --- Kind is decided by which directory a post lives in, never by front matter ---
+  -
+    scope:
+      path: "_posts/til"
+      type: "posts"
+    values:
+      kind: "til"
+      permalink: "/til/:year-:month-:day-:title/"
+  -
+    scope:
+      path: "_posts/journal"
+      type: "posts"
+    values:
+      kind: "journal"
+      permalink: "/journal/:year-:month-:day-:title/"
   -
     scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      kind: "article"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
   -

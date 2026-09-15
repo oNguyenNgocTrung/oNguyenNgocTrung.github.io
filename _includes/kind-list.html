@@ -1,0 +1,39 @@
+{%- comment -%}
+  Lists every post of one kind, newest first, grouped by year.
+
+  Params:
+    kind   - "til" or "journal"
+    empty  - text shown when nothing of this kind exists yet
+
+  Grouped by year on purpose: the point of these two sections is looking back,
+  and "what did I learn in 2026" is the question actually being asked. Kept
+  deliberately compact - one line per post - because TILs and Journals are short
+  enough that a title and a date are the whole of what you need to find one.
+{%- endcomment -%}
+
+{%- assign posts = site.posts | where: "kind", include.kind -%}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
+{%- if posts.size == 0 -%}
+  <p class="kind-list-empty">{{ include.empty }}</p>
+{%- else -%}
+  {%- assign by_year = posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+  {%- for year in by_year -%}
+    <h2 class="kind-list-year">{{ year.name }}<span class="kind-list-count">{{ year.items.size }}</span></h2>
+    <ul class="kind-list list-unstyled" role="list">
+      {%- for post in year.items -%}
+        <li class="kind-list-item">
+          <a href="{{ post.url | relative_url }}">{{ post.title | strip_html }}</a>
+          <time class="kind-list-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+          {%- if post.tags.size > 0 -%}
+            <span class="kind-list-tags">
+              {%- for tag in post.tags -%}
+                <a href="{{ '/topics' | relative_url }}#{{ tag }}">{{ tag }}</a>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endfor -%}
+{%- endif -%}

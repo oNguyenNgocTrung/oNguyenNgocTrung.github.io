@@ -1,0 +1,142 @@
+/* ---------------------------------------------------------------------------
+   Site customisations, loaded via `site-css` in _config.yml.
+
+   Everything specific to this site lives here rather than in
+   assets/css/beautifuljekyll.css, so that the theme's own stylesheet stays
+   byte-identical to upstream and this file is the single place to look.
+   --------------------------------------------------------------------------- */
+
+/* --- Kind badges ---------------------------------------------------------- */
+
+.kind-badge {
+  display: inline-block;
+  padding: 0.1em 0.55em;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+a.kind-badge:hover,
+a.kind-badge:focus {
+  text-decoration: none;
+  filter: brightness(0.92);
+}
+
+.kind-til {
+  color: #0b5c8a;
+  background: #e1f0f9;
+  border-color: #b8ddf0;
+}
+
+.kind-journal {
+  color: #8a5a0b;
+  background: #fbf0dd;
+  border-color: #f0dcb8;
+}
+
+.kind-article {
+  color: #3d6b3d;
+  background: #e6f2e6;
+  border-color: #c7e0c7;
+}
+
+/* --- Compact rows in the home stream -------------------------------------- */
+
+.post-preview-compact {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-preview-compact article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.post-title-compact {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.post-meta-compact {
+  color: #999;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.compact-tags a {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.compact-tags a + a::before {
+  content: "\00b7";
+  margin: 0 0.35em;
+  color: #ccc;
+}
+
+/* --- /til and /journal listings ------------------------------------------- */
+
+.kind-list-year {
+  margin: 1.8rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.kind-list-count {
+  float: right;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #bbb;
+}
+
+.kind-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+}
+
+.kind-list-date {
+  color: #999;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.kind-list-tags a {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.kind-list-tags a + a::before {
+  content: "\00b7";
+  margin: 0 0.35em;
+  color: #ccc;
+}
+
+.kind-list-empty,
+.topics-empty {
+  padding: 1.5rem 0;
+  color: #888;
+  font-style: italic;
+}
+
+/* --- /topics -------------------------------------------------------------- */
+
+.topic-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.tag-entry .kind-badge {
+  margin-right: 0.4rem;
+}

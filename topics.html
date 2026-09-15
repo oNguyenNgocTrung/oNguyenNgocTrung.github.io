@@ -1,0 +1,61 @@
+---
+layout: page
+title: Topics
+subtitle: Mọi thứ đã viết, xếp theo chủ đề
+---
+
+{%- comment -%}
+  Topics are an open set - they grow out of whatever gets written rather than
+  being fixed in advance, so this page is generated from site.tags and never
+  maintained by hand.
+
+  Sorted by post count, descending. Alphabetical order would put a one-off topic
+  with a single post above a topic with thirty, which is exactly backwards for a
+  set that is allowed to grow unchecked. Liquid cannot sort a hash by a computed
+  value, hence the zero-padded "00012#ruby" strings below.
+{%- endcomment -%}
+
+{%- assign entries = "" -%}
+{%- for tag in site.tags -%}
+  {%- capture padded %}{{ tag[1].size | prepend: '00000' }}{% endcapture -%}
+  {%- assign padded = padded | slice: -5, 5 -%}
+  {%- capture entries %}{{ entries }}{{ padded }}#{{ tag[0] }},{% endcapture -%}
+{%- endfor -%}
+{%- assign entries = entries | split: ',' | sort | reverse -%}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
+{%- if entries.size == 0 -%}
+  <p class="topics-empty">Chưa có bài nào. Chủ đề sẽ tự hiện ra ở đây khi bài đầu tiên được viết.</p>
+{%- else -%}
+
+  <div class="topic-buttons">
+  {%- for entry in entries -%}
+    {%- assign parts = entry | split: '#' -%}
+    {%- assign name = parts[1] -%}
+    <a href="#{{ name }}" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{ name }}&nbsp;({{ site.tags[name].size }})</a>
+  {%- endfor -%}
+  </div>
+
+  <div id="full-tags-list">
+  {%- for entry in entries -%}
+    {%- assign parts = entry | split: '#' -%}
+    {%- assign name = parts[1] -%}
+    <h2 id="{{ name }}" class="linked-section">
+      <i class="fas fa-tag" aria-hidden="true"></i>
+      &nbsp;{{ name }}&nbsp;({{ site.tags[name].size }})
+    </h2>
+    <div class="post-list">
+      {%- for post in site.tags[name] -%}
+        <div class="tag-entry">
+          <span class="kind-badge kind-{{ post.kind }}">{{ post.kind }}</span>
+          <a href="{{ post.url | relative_url }}">{{- post.title | strip_html -}}</a>
+          <div class="entry-date">
+            <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+  </div>
+
+{%- endif -%}

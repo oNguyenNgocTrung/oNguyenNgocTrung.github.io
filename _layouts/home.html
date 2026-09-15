@@ -6,9 +6,30 @@ layout: page
 
 {% assign posts = paginator.posts | default: site.posts %}
 
+{%- comment -%}
+  DIVERGES FROM UPSTREAM. Two changes, both deliberate:
+
+  1. Posts render differently by kind. Articles keep upstream's full preview
+     (thumbnail, excerpt, Read More). TILs and Journals collapse to a single
+     line, because they are short by definition and a 50-word excerpt of a
+     three-line post is just the post again.
+
+     The reason this matters: TILs get written far more often than Articles.
+     With one uniform rendering the home stream silently becomes a wall of
+     one-liners and the long pieces drown. Sizing the preview to the kind keeps
+     the page honest about what is on it - everything shows up, but the eye
+     still lands on the Articles.
+
+  2. Tag links point at /topics, not /tags. "Tag" is Jekyll's mechanism;
+     "topic" is the word this site uses with its readers.
+{%- endcomment -%}
+
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
+  {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+  {% if post.kind == "article" %}
   <li class="post-preview">
     <article>
 
@@ -50,7 +71,6 @@ layout: page
         <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
       <p class="post-meta">
-        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         Posted on {{ post.date | date: date_format }}
       </p>
 
@@ -88,7 +108,7 @@ layout: page
         <ul class="d-inline list-inline" role="list">
           {% for tag in post.tags %}
           <li class="list-inline-item">
-            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+            <a href="{{ '/topics' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
           </li>
           {% endfor %}
         </ul>
@@ -97,6 +117,22 @@ layout: page
 
     </article>
   </li>
+
+  {% else %}
+  <li class="post-preview post-preview-compact">
+    <article>
+      <span class="kind-badge kind-{{ post.kind }}">{{ post.kind }}</span>
+      <a href="{{ post.url | absolute_url }}" class="post-title-compact">{{ post.title | strip_html }}</a>
+      <time class="post-meta-compact" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+      {% if site.feed_show_tags != false and post.tags.size > 0 %}
+        <span class="compact-tags">
+          {% for tag in post.tags %}<a href="{{ '/topics' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>{% endfor %}
+        </span>
+      {% endif %}
+    </article>
+  </li>
+  {% endif %}
+
   {% endfor %}
 </ul>
 

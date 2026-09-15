@@ -43,12 +43,23 @@ layout: base
         {{ content }}
       </div>
 
-      {% if page.tags.size > 0 %}
+      {%- comment -%}
+        DIVERGES FROM UPSTREAM: shows the post's kind, and points tag links at
+        /topics rather than /tags ("tag" is Jekyll's mechanism, "topic" is the
+        word this site uses with its readers).
+      {%- endcomment -%}
+      {% if page.tags.size > 0 or page.kind %}
         <div class="blog-tags">
-          <span>Tags:</span>
-          {% for tag in page.tags %}
-            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-          {% endfor %}
+          {% if page.kind %}
+            <a href="{% if page.kind == 'article' %}{{ '/topics' | relative_url }}{% else %}{{ page.kind | prepend: '/' | relative_url }}{% endif %}"
+               class="kind-badge kind-{{ page.kind }}">{{ page.kind }}</a>
+          {% endif %}
+          {% if page.tags.size > 0 %}
+            <span>Tags:</span>
+            {% for tag in page.tags %}
+              <a href="{{ '/topics' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+            {% endfor %}
+          {% endif %}
         </div>
       {% endif %}
 
