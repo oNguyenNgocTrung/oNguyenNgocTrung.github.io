@@ -260,6 +260,7 @@ date_format: "%B %-d, %Y"
 
 # Output options (more information on Jekyll's site)
 timezone: "Asia/Ho_Chi_Minh"
+port: 4040           # 4000 is usually taken by another local project
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
