@@ -164,6 +164,7 @@ site-css:
 # If you have common JavaScript files that should be included in every page, list them here
 site-js:
   - "/assets/js/mermaid.js"  # fetches Mermaid only on pages with a ```mermaid block
+  - "/assets/js/runnable.js"  # fetches Codapi only on pages with a {: .runnable} code block
 
 #################################
 # --- Web Analytics Section --- #

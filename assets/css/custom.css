@@ -189,3 +189,96 @@ pre.mermaid {
   border: 0;
   text-align: center;
 }
+
+/* --- Runnable code blocks (assets/js/runnable.js, Codapi widget) ---------- */
+
+pre {
+  tab-size: 4; /* Go indents with tabs; the browser default of 8 is too wide */
+}
+
+div.runnable .highlight > pre {
+  border-left-color: #0085A1;
+  margin-bottom: 0;
+}
+
+div.runnable code[contenteditable="true"]:focus {
+  outline: none;
+}
+
+div.runnable:focus-within .highlight > pre {
+  border-color: #0085A1;
+}
+
+codapi-snippet {
+  display: block;
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.85rem;
+}
+
+codapi-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+codapi-toolbar button {
+  padding: 0.2rem 0.9rem;
+  border: 1px solid #0085A1;
+  border-radius: 3px;
+  background: #0085A1;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+codapi-toolbar button:hover {
+  filter: brightness(0.92);
+}
+
+codapi-toolbar button[disabled] {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+codapi-toolbar a {
+  color: #0085A1;
+}
+
+codapi-status {
+  display: block;
+  white-space: nowrap;
+  color: #888;
+}
+
+codapi-ref {
+  margin-left: 0.3em;
+  font-size: 0.75rem;
+}
+
+codapi-output {
+  position: relative;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+codapi-output[hidden] {
+  display: none;
+}
+
+codapi-output pre {
+  margin: 0;
+  padding: 0.6rem 2rem 0.6rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 0.4375rem solid #bbb;
+  background: #f7f9fa;
+  white-space: pre-wrap;
+}
+
+codapi-output a[href="#close"] {
+  position: absolute;
+  top: 0.25em;
+  right: 0.4em;
+  color: #888;
+  text-decoration: none;
+}
