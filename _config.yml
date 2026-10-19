@@ -162,8 +162,8 @@ site-css:
   - "/assets/css/custom.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-#site-js:
-#  - "/assets/js/custom-script.js"
+site-js:
+  - "/assets/js/mermaid.js"  # fetches Mermaid only on pages with a ```mermaid block
 
 #################################
 # --- Web Analytics Section --- #
@@ -294,6 +294,7 @@ defaults:
       layout: "post"
       kind: "article"
       comments: true  # add comments to all blog posts
+      after-content: ["series-nav.html"]  # renders nothing unless the post sets `series`
       social-share: true # add social media sharing buttons to all blog posts
   -
     scope:

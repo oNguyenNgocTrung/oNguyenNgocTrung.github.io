@@ -1,0 +1,46 @@
+{%- comment -%}
+  Previous/next navigation within a series. A post joins a series with
+  `series: <slug>` in its front matter; the parts are every post sharing that
+  slug, in date order. Nothing lists them by hand, so inserting a part means
+  giving it a date between its neighbours.
+
+  Reached through the theme's `after-content` hook, which _config.yml sets as
+  a default on every post. Renders nothing for a post without `series`.
+{%- endcomment -%}
+
+{%- if page.series -%}
+  {%- assign parts = site.posts | where: "series", page.series | sort: "date" -%}
+  {%- for part in parts -%}
+    {%- if part.url == page.url -%}
+      {%- assign position = forloop.index -%}
+      {%- assign prev_index = forloop.index0 | minus: 1 -%}
+      {%- assign next_index = forloop.index0 | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <nav class="series-nav" aria-label="Series">
+    <div class="series-nav-title">
+      Part {{ position }} of {{ parts.size }} in the series
+      <strong>{{ page.series | replace: "-", " " }}</strong>
+    </div>
+    <ol class="series-nav-parts">
+      {%- for part in parts -%}
+        <li{% if part.url == page.url %} class="current" aria-current="page"{% endif %}>
+          {%- if part.url == page.url -%}
+            {{ part.title | strip_html }}
+          {%- else -%}
+            <a href="{{ part.url | relative_url }}">{{ part.title | strip_html }}</a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ol>
+    <div class="series-nav-links">
+      {%- if prev_index >= 0 -%}
+        <a class="series-nav-prev" href="{{ parts[prev_index].url | relative_url }}">&larr; {{ parts[prev_index].title | strip_html }}</a>
+      {%- endif -%}
+      {%- if next_index < parts.size -%}
+        <a class="series-nav-next" href="{{ parts[next_index].url | relative_url }}">{{ parts[next_index].title | strip_html }} &rarr;</a>
+      {%- endif -%}
+    </div>
+  </nav>
+{%- endif -%}

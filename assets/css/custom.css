@@ -140,3 +140,52 @@ a.kind-badge:focus {
 .tag-entry .kind-badge {
   margin-right: 0.4rem;
 }
+
+/* --- Series navigation (_includes/series-nav.html) ------------------------ */
+
+.series-nav {
+  margin: 2rem 0 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #0085A1;
+  background: #f7f9fa;
+  font-size: 0.95rem;
+}
+
+.series-nav-title {
+  margin-bottom: 0.5rem;
+  color: #777;
+}
+
+.series-nav-title strong {
+  color: #404040;
+  text-transform: capitalize;
+}
+
+.series-nav-parts {
+  margin: 0 0 0.75rem;
+  padding-left: 1.4rem;
+}
+
+.series-nav-parts .current {
+  font-weight: 700;
+}
+
+.series-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.series-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* --- Mermaid diagrams (assets/js/mermaid.js) ------------------------------ */
+
+pre.mermaid {
+  background: none;
+  border: 0;
+  text-align: center;
+}
